@@ -13,5 +13,6 @@ func main() {
 	}
 	err = syscall.TerminateProcess(handle, 1)
 	fmt.Printf("Process: %d died unsuccessfully\n", handle)
-
+	// We should not see process 1 die unsuccessfully
+	// that would mean our process didn't terminate
 }
